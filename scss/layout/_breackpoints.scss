@@ -1,0 +1,16 @@
+//700ppx 900px 1440px
+
+
+
+$brackpoint-up:(
+    "medium": 43.75em,
+    "large":56.25em,
+    "xlarge": 90em,
+);
+
+@mixin breackpoint() {
+    @media (min-width: mao-get($brackpoint-up, $size)) {
+        @content;
+    }   
+}
+
