@@ -4,14 +4,19 @@
 
 /*Mobile */
   
+ // Use flex to postion de element .
+//Display flex para organizar los elemento.
 .nav{
     display:flex;
-    flex-direction:column;
+    flex-direction:column;  //We organize them in column order.
+                           //Direccionde de ubicacion en columnas.
     
-
+     //Use flex to positio the 3 child elements.
+    //Display flex para organizar los 3 elementos hijos.
     &__up{
         display:flex;
-        justify-content: space-between; 
+        justify-content: space-between;  //Place at the ends of the container.  
+                                        //Ubicamos en los extremos del contenedor.
         align-items: center;         
         height:35px;
         padding:auto 0;
@@ -19,8 +24,10 @@
         color:rgba(0,166,88,255);
         align-content: center;
 
+         //Declaring styles and position.
+        //Estios y posicionamiento.
         h1{
-            margin:2px  0 0 10px;
+            margin:2px  0 0 10px; 
         }
 
         p{
@@ -37,14 +44,20 @@
         
     }
 
+
+     //Use flex to positio the child element.
+    //Display flex para organizar el elemnto.
     &__down{
-       background-color: rgba(74,98,114,255);    
-        display:flex;
-        justify-content: center;
-        align-items: center; 
+        background-color: rgba(74,98,114,255);     
         height:40px;
         color:rgba(125,191,218,255);
         font-size: 8px;
+        display:flex;
+        
+         //Vertical and horizontal placement.
+         //Ubicacion de elementos en horizontal y verical.
+         justify-content: center;
+         align-items: center;
 
         h2{
             font-weight: 400;
@@ -53,7 +66,8 @@
     }
 }
 
-
+ //Sizing and giving ownership to the section. sort with flex.
+//Dimension y aliniamento con flex.
  .card{
         
         display: flex;
@@ -62,6 +76,8 @@
         height:600px;
         width: 100%;
 
+         //Dimensions and alignment with flex for the main content of the section.
+        //Dimensionamiento y alineacion del contenido pincipal de la seccion, con flex.
         .photo{
             height: 30%;
             width: 80%;
@@ -70,15 +86,21 @@
             position: relative;
         }
 
+        
         &__left{
         
-            background: url(../../src/img/main-offer.jpg) no-repeat center center;
-            background-size: cover;
+            background: url(../../src/img/main-offer.jpg) no-repeat center center; 
+            background-size: cover; 
+
+             //Placing the element in the card
+            //Ubicndo elemento en la carta 
             display:flex;
             justify-content:center;
             align-items: center;
             border-radius:10px;
 
+             //Styling floating card (margin and opacity backgroun)
+            //Dando estilos a carta flotante (margenes y opacidad)
             &-container{
                 width: 80%;
                 height: 80%;
@@ -86,32 +108,36 @@
                 padding: 30px 0 0 0;
             }
 
+              //Declaring styles.
+             // Dando estilos 
             &-h2{
-                    color: #fff;
+                    color: var(--clear-color);
                     text-align: center;
-                    font-weight: 200;
+                    font-weight: 100;
                     
                 }
 
+              //Declaring styles.
+             // Dando estilos 
             &-p{
-                    color: #fff;
+                    color: var(--clear-color);
                     text-align: center;
                     font-weight: 200;
 
                 }
 
+              //Declaring styles, position and size.
+             // Dando estilos, posicionamiento y tamaño 
             &-btn{
                     width:50%;
                     height:20px;
                     margin: 0 auto;
                     background-color:var(--btn-color);
-                    color:#fff;
+                    color:var(--clear-color);
                     border: none;
                     text-transform: uppercase;
                     display:flex;
-              
                     align-items: center;
-                    /* align-content: center; */
                     justify-content: space-around;
                     
                     
@@ -124,18 +150,15 @@
             
         }
 
-
+         //Using the same clase to define estyle in Middle and right parent Blocs
+        //Compartiendo estilos con los elemendo de clases middle y right de la seccion cards
         .plus{
          
-            
-
             h2{
                 text-transform: uppercase;
                 font-weight:400;
                 text-align: center;
                 color: #fff;
-                
-           
             }
 
             p{
@@ -154,12 +177,14 @@
                 justify-content: space-around;
             }
 
-
+             //change visibility for mobile view
+            //cambianod la vista resolucion movil 
             img{
                 display:none;
             }
             
-
+              //background gradiente for cards designe
+             //diseño de fondo en gradiente 
             div{
                 background-image: linear-gradient(
                     to right  bottom,
@@ -186,24 +211,28 @@
     
 
 
-
+//Dimensions to the main block of the section.
+// dimensioando y ubicando el bloque principal
 .banner{
     
     width: 80%;
     height:320px; 
     margin: 40px auto 0;
     
-
+ //Styles and behavior to the image section.
+//Comportamiento y estilos de la seccion de imagen.
     &__landscape{
-        overflow:hidden;
+        overflow:hidden;  //hide or cut content that exceeds its dimensions - corta el contenido desbordado
         position: relative;
         display: none;
        
         img{
             object-fit: cover;
-        }
+        } 
     }
-
+ //Styles and behavior to the infoormation section.
+//Comportamiento y estilos de la seccion de imagen.
+    
     &__information{
        
         background: linear-gradient(153deg, rgba(204,216,230,1) 0%, rgba(223,214,199,1) 100%);;
