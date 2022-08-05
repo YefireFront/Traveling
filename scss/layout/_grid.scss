@@ -1,6 +1,10 @@
+
+//add the file path from style.scss to the util folder
+//ruta para acceder a style.scss
 @use '../util' as u;
 
 
+/*design concept used : MOBILE FIRST*/
 
 /*Mobile */
   
@@ -21,7 +25,7 @@
         height:35px;
         padding:auto 0;
         font-size: 8px;
-        color:rgba(0,166,88,255);
+        color:var(--btn-color);
         align-content: center;
 
          //Declaring styles and position.
@@ -48,9 +52,9 @@
      //Use flex to positio the child element.
     //Display flex para organizar el elemnto.
     &__down{
-        background-color: rgba(74,98,114,255);     
+        background-color: var(--header-color);     
         height:40px;
-        color:rgba(125,191,218,255);
+        color:var(--header-s-text);
         font-size: 8px;
         display:flex;
         
@@ -158,17 +162,17 @@
                 text-transform: uppercase;
                 font-weight:400;
                 text-align: center;
-                color: #fff;
+                color:var(--clear-color);
             }
 
             p{
-                color: rgb(230, 230, 230);
+                color:var(--clear-color);
                 text-align: center;
             }
 
             i{
                 display: flex;
-                background-color:#fff;
+                background-color:(--clear-color);
                 width:30px;
                 height:30px;
                 color: var(--btn-color);
@@ -188,7 +192,7 @@
             div{
                 background-image: linear-gradient(
                     to right  bottom,
-                    #00a659d5,
+                    var(--btn-color),
                     hsla(0, 1%, 27%, 0.459) ),
                     url('../../src/img/offers1.jpg');
                     background-size: fill;
@@ -230,9 +234,9 @@
             object-fit: cover;
         } 
     }
+
  //Styles and behavior to the infoormation section.
-//Comportamiento y estilos de la seccion de imagen.
-    
+//Comportamiento y estilos de la seccion de informacion.
     &__information{
        
         background: linear-gradient(153deg, rgba(204,216,230,1) 0%, rgba(223,214,199,1) 100%);;
@@ -240,10 +244,11 @@
         background-repeat: no-repeat;
         padding:10px;
 
+ //positioning and size of the section texts
+//posicionamiento y tamaño de los textos de la seccion 
         .banner__paragraph{
             text-align: center;
             
-           
 
             &-h2{
                 color: var(--btn-color);
@@ -255,11 +260,11 @@
             &-p{
                 font-size: 12.8px;
             }
-
-          
-
+   
         }
 
+    //positioning and size of the section date
+//posicionamiento y tamaño  de la seccion de datos     
         .banner__price{ 
 
             display: flex;
@@ -283,46 +288,33 @@
 
             &-btn{
                 background-color: var(--btn-color);
-                color: #fff;
+                color: var(--clear-color);
                 width:200px;
                 height:45px;
                 border: none;
                 text-align: center;
-             
-                
-               
-          
-
             }
             
         
         }
-
-        
-
-        
+      
     }
 
 }
 
 
 
-
-
-
-
-
-
-
-
-    
+  //dimension and styles from the slider section.
+ //estilos y dimensines de la seccion de slider
         
 .slider{
             
             height:300px;
             display:flex;
             align-items: center;
-    
+  
+ //parent container of the slider section.           
+//contenedor principal de la seccion de slider.
             &__container{
                 height:60%;
                 background-image: url(../../src/img/main-offer.jpg) ;
@@ -335,11 +327,13 @@
                 justify-items: center;
             }
     
-    
+ 
+// dimention, style and positio of floating  card          
+// dimensiones, estilos y posicionamiento de la carta flotante           
             &__over{
                 width:95%;
                 height:80%;
-                background-color:#fff;
+                background-color:var(--clear-color);
                 margin: 120px auto 0;
                 display:flex;
                 flex-direction: column;
@@ -350,7 +344,8 @@
             
         }
 
-    
+// Design, element dimensional and styles of the fotter section  
+// diseño, dimensional y estilos de la seccion fotter   
 .footer{
     width: 100%;
     height: 200px;
@@ -364,7 +359,9 @@
     #4e4e4eea ),
     url('../../src/img/footer-bg.jpg');
     background-size: cover;
-    
+ 
+ //size and location of the first list
+// ubicacion y posicionamiento de los elementos del footer
     ul{
         display: flex;
         margin-left: -30px;
@@ -378,7 +375,7 @@
             a{
                 color:var(--btn-color);  
                 &:hover{
-                    color: #fff;
+                    color:var(--clear-color);
                 }              
             }
         }
@@ -388,9 +385,11 @@
 
 
 
-
+/*Tablet*/
 @media only screen and (min-width: 700px) {
 
+    //modifying banner section properties
+    //modificanod propiedades del bloque banner
     .banner{
             height:220px; 
             margin-top: 40px;
@@ -399,10 +398,6 @@
             height: 100%;
             display: flex;
             background-color: #fff;
-            
-                  
-
-           
 
             &__landscape{
                 display:inline;
@@ -498,7 +493,8 @@
 
    
  
-          
+   //modifying footer section properties
+    //modificanod propiedades de la seccion footer        
     .footer{
         align-items: center;
         height: 300px;
@@ -532,8 +528,17 @@
     }
 }
 
+
+
+
+
+
+
+/*Destock*/
 @media only screen and (min-width: 1200px) {
 
+//overriding style size and margins for larger resolutions(some main element)
+//sobrescribiendo tamaño y margenes del stilo para resoluciones mayores (algunos elemntos de main)
     main{
         max-width: 1170px;;
         margin: 20px 80px 0;
@@ -647,7 +652,9 @@
 
 
 
+/*Destock 2k+*/
 @media only screen and (min-width: 1300px){
+    //main 2k + resolucionts
     main{
         margin: 0 auto;
     }
