@@ -1,33 +1,32 @@
+
+//These are some general styles that I use on different website projects. These are what I sort of consider global styles 
+//Estos son algunos estilos generales que uso en diferentes proyectos de sitios web. Estos son lo que considero estilos globales
+
+
+//add the file path from bolierplates.scss to the util folder
+//ruta para acceder a bolierplates.scss
 @use '../util' as u;
 
 
-@mixin cards {
-                border-radius:10px;                
-                background-image: linear-gradient(
-                    to right  bottom,
-                    #00a659ad,
-                    hsla(0, 0%, 25%, 0.459) ),
-                    url('../../src/img/offers2.jpg');
-                background-size: cover;
-                background-position: center center;
-                background-color: #fff;
-                width:100%;
-                height:100%;
-                padding: 7px;
-                font-size: 15px;
-    
-}
-
 
 html{
-    box-sizing: border-box;
-    font-size:100%;
-}
+    
+//It ensures that  if add padding  or borders an element it means it’ll be included in the final width or height
+//evitar que los margenes se unan al tamaño final del elemento
+box-sizing: border-box; 
 
+ //Font-size 100% make sure that the font size on your website is going to match 100% of the default font size set in your browser
+//asegurará que el tamaño de fuente en su sitio web coincida al 100% con el tamaño de fuente predeterminado establecido en su navegador.
+font-size:100%; 
+}
+//this will inherit the box-sizing values of box-sizing border box from the html element 
+//esto heredará los valores de tamaño de cuadro del elemento de html
 *, *::before, *::after{
     box-sizing:inherit;
 }
 
+//adding the typography and restart default values. adding the project image. reset body values browser
+//añadiendo imagen de fondo del projecto y resentendo los valores de margenes por defaul de el navegador
 body {
     margin: 0;
     padding: 0;

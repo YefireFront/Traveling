@@ -1,3 +1,5 @@
+//defining label characteristics: margins, spacing and wight
+//definiendo características de las etiquetas: margenes, espaciado y grosor
 h1, h2, h3{
     font-weight:700;
     line-height: 1.1;
@@ -5,10 +7,14 @@ h1, h2, h3{
     
 }
 
+//defining label characteristics - marging-top
+//margen superior 
 p{
     margin-top:0;
 }
 
+//reset characteristics when links are visited or actived
+//eliminar el comportamiendo de la etiqueta a cuando es visitada o activada
 a, a:visited, a:active{
     text-decoration:none;
 }
