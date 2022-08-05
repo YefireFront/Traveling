@@ -4,12 +4,12 @@
 
 /*Mobile */
   
-header{
+.nav{
     display:flex;
     flex-direction:column;
     
 
-    .header__nav{
+    &__up{
         display:flex;
         justify-content: space-between;          
         height:35px;
@@ -20,7 +20,7 @@ header{
         
     }
 
-    .header__tittle{
+    &__down{
        background-color: rgba(74,98,114,255);    
         display:flex;
         justify-content: center;
@@ -28,37 +28,29 @@ header{
         height:30px;
         color:rgba(125,191,218,255);
         font-size: 8px;
-
-      
     }
-  
-
-
 }
 
-main{
-   
-  
+
     
-    .main__section1{
+    .card{
         
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-     
         height:600px;
         width: 100%;
 
-        .qu{
+        .q{
             height: 30%;
             width: 80%;
             max-width: 500px;
             margin: 5px auto;
             position: relative;
-
         }
 
-        .main__card-opacity{
+        &__left{
+        
             background: url(../../src/img/main-offer.jpg) no-repeat center center;
             background-size: cover;
             display:flex;
@@ -66,27 +58,28 @@ main{
             align-items: center;
             border-radius:10px;
 
-            div{
+            &-container{
                 width: 80%;
                 height: 80%;
                 background-color: rgba(0, 0, 0, 0.63);
                 padding: 30px 0 0 0;
+            }
 
-                h2{
+            &-h2{
                     color: #fff;
                     text-align: center;
                     font-weight: 200;
                     
                 }
 
-                p{
+            &-p{
                     color: #fff;
                     text-align: center;
                     font-weight: 200;
 
                 }
 
-                button{
+            &-btn{
                     width:50%;
                     height:20px;
                     margin: 0 auto;
@@ -104,16 +97,18 @@ main{
                     
                 }
 
-            }
+            
             
         
             
         }
-        .main__card{
+
+
+        &__middle{
          
             
 
-            h2{
+            &-h2{
                 text-transform: uppercase;
                 font-weight:400;
                 text-align: center;
@@ -122,12 +117,12 @@ main{
            
             }
 
-            p{
+            &-p{
                 color: rgb(230, 230, 230);
                 text-align: center;
             }
 
-            i{
+            &-i{
                 display: flex;
                 background-color:#fff;
                 width:30px;
@@ -136,34 +131,15 @@ main{
                 margin: 0 auto;
                 align-items: center;
                 justify-content: space-around;
-                border-radius: 50%;
             }
 
 
-
-
-            img{
+            &-img{
                 display:none;
             }
             
-            .uno{
-                border-radius:10px;                
-                background-image: linear-gradient(
-                    to right  bottom,
-                    #00a659ad,
-                    hsla(0, 0%, 25%, 0.459) ),
-                    url('../../src/img/offers2.jpg');
-                background-size: cover;
-                background-position: center center;
-                background-color: #fff;
-                width:100%;
-                height:100%;
-                padding: 7px;
-                font-size: 15px
-            }
-            
-            .dos{
-                
+
+            &-container{
                 background-image: linear-gradient(
                     to right  bottom,
                     #00a659d5,
@@ -176,20 +152,73 @@ main{
                     height:100%;
                     padding: 7px;
                     font-size: 15px;
+                
             }
+            
+         
+        }
+        
+        &__right{
+
+            &-h2{
+                text-transform: uppercase;
+                font-weight:400;
+                text-align: center;
+                color: #fff;
+                
+           
+            }
+
+            &-p{
+                color: rgb(230, 230, 230);
+                text-align: center;
+            }
+
+            &-i{
+                display: flex;
+                background-color:#fff;
+                width:30px;
+                height:30px;
+                color: var(--btn-color);
+                margin: 0 auto;
+                align-items: center;
+                justify-content: space-around;
+            }
+
+
+            &-img{
+                display:none;
+            }
+
+            &-container{
+                background-image: linear-gradient(
+                    to right  bottom,
+                    #00a659d5,
+                    hsla(0, 1%, 27%, 0.459) ),
+                    url('../../src/img/offers1.jpg');
+                    background-size: fill;
+                    background-position: center center;
+                    border-radius:10px;
+                    width:100%;
+                    height:100%;
+                    padding: 7px;
+                    font-size: 15px;
+                
+            }
+
         }
       
-        }
+    }
 
     
         
-        .slider{
+    .slider{
             
-            height:300px;
-            display:flex;
-            align-items: center;
+        height:300px;
+        display:flex;
+        align-items: center;
     
-            .fondo{
+            &__container{
                 height:60%;
                 background-image: url(../../src/img/main-offer.jpg) ;
                 background-repeat:no-repeat;
@@ -199,24 +228,25 @@ main{
                 display:flex;
                 align-items: center;
                 justify-items: center;
-    
-    
-                .flotante{
-                    width:95%;
-                    height:80%;
-                    background-color:#fff;
-                    margin: 120px auto 0;
-                    display:flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 20px;;
-                }
             }
-        }
-}
     
-footer{
+    
+            &__over{
+                width:95%;
+                height:80%;
+                background-color:#fff;
+                margin: 120px auto 0;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                 border-radius: 20px;;
+            }
+            
+        }
+
+    
+.footer{
     width: 100%;
     height: 200px;
     margin-top: 100px;
@@ -241,7 +271,10 @@ footer{
             color:var(--btn-color);
             
             a{
-                color:var(--btn-color);                
+                color:var(--btn-color);  
+                &:hover{
+                    color: #fff;
+                }              
             }
         }
 
@@ -253,16 +286,11 @@ footer{
 
 @media only screen and (min-width: 700px) {
 
-    main{
-
-        .triangulo{
+    .banner{
             height:220px; 
             margin-top: 40px;
             width: 95%;
             margin: 50px auto 0;
-
-
-        &__container{
             height: 100%;
             display: flex;
             background-color: #fff;
@@ -270,11 +298,11 @@ footer{
 
            
 
-            .triangulo__imagen{
+            &__landscape{
                 display:inline;
                 width:100%; 
         
-                img{
+                &-img{
                     width: 135%;
                     height:220px;
                     object-fit: fill;          
@@ -282,18 +310,18 @@ footer{
                 }
             }
             
-            .triangulo__info{
+            &__information{
                 
                     display: grid;
                     grid-template-columns: 5fr 1fr;
                     grid-template-rows: 1fr;  
                     position: relative;                  
                 
-                .left{
+                .banner__paragraph{
                     margin:10px 0 0 20px;
                    
         
-                    h2{
+                    &-h2{
                         color: var(--btn-color);
                         margin-left: 10px;
                         font-weight: 400;
@@ -302,18 +330,18 @@ footer{
                         font-size: 18px;
                     }
 
-                    p{
+                    &-p{
                         
                         font-size: 12.8px;
                     }
 
-                    .date{
+                    &-h4{
                         margin-top: 75px;
                     }
 
                 }
 
-                .right{ 
+                .banner__price{ 
 
                     display: flex;
                     flex-direction: column;
@@ -322,20 +350,20 @@ footer{
                    
           
                                     
-                    h3{
+                    &-h3{
                         font-size: 15px;
                         position: relative;
                         top:48px;
                                        
                     } 
 
-                    h4{
+                    &-h4{
                         font-size: 25px;
                         font-weight: 400;
 
                     }
 
-                    button{
+                    &-btn{
                         background-color: var(--btn-color);
                         color: #fff;
                         width:200px;
@@ -353,33 +381,20 @@ footer{
                 }
             }
 
-        }
+        
 
         
-        }
-
-            .slider{
-        
-          
-        
-                .fondo{
-              
-        
-        
-                    .flotante{
-                        width:80%;
-                    }
-                }
-            }    
-
-
     }
 
-    footer{
+    .slider__over{
+        width:80%;
+    }
+          
+    .footer{
         align-items: center;
         height: 300px;
 
-        .fotter__list{
+        .fotter__up{
             margin-bottom: -30px;
 
             li{
@@ -388,7 +403,7 @@ footer{
         }
         
         
-        .footer__list--icons{
+        &__down{
             
             margin-top: 15px;
             
@@ -400,27 +415,13 @@ footer{
     
 
         ul{
-            font-size:20px;
-
-            li{
-                &:hover{
-                    color:#fff
-                }
-
-                a{
-                    &:hover{
-                        color: #fff
-                    }
-                }
-            }
+            font-size:20px;    
         }
-        
+      
+
 
     }
-    
-
-
-};
+}
 
 @media only screen and (min-width: 1200px) {
 
@@ -430,7 +431,7 @@ footer{
         flex-direction:column;
         
 
-        .header__nav{
+        .nav{
             display:flex;
             justify-content: space-between;          
         }
@@ -457,7 +458,7 @@ footer{
         margin: 20px 80px 0;
      
 
-        section{
+        
 
             .main__section1{
                 display: grid; 
@@ -552,7 +553,7 @@ footer{
               
 
             }
-        }
+        
 
           .triangulo{
             height:220px; 
